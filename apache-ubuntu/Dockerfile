@@ -8,10 +8,6 @@ MAINTAINER Michele Bologna <michele.bologna@suse.com>
 ARG repo
 ARG cert
 
-RUN echo "$cert" > /tmp/cert.pem
-#RUN update-ca-certificates
-RUN echo "$repo" > /tmp/repo
-
 ADD add_packages.sh /root/add_packages.sh
 RUN /root/add_packages.sh
 

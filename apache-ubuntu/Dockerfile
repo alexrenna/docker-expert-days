@@ -2,8 +2,8 @@
 #
 # VERSION               1.0.0
 
-FROM ubuntu
-MAINTAINER Michele Bologna <michele.bologna@suse.com>
+FROM centos/httpd-24-centos7
+MAINTAINER Alessandro Renna <alessandro.renna@suse.com>
 
 ARG repo
 ARG cert
@@ -11,10 +11,10 @@ ARG cert
 ADD add_packages.sh /root/add_packages.sh
 RUN /root/add_packages.sh
 
-ADD pub.conf /etc/apache2/conf-available/pub.conf
-RUN ln -s /etc/apache2/conf-available/pub.conf /etc/apache2/conf-enabled/pub.conf && mkdir -p /srv/www/htdocs/pub/
-ADD index.html /srv/www/htdocs/pub/index.html
+# ADD pub.conf /etc/apache2/conf-available/pub.conf
+# RUN ln -s /etc/apache2/conf-available/pub.conf /etc/apache2/conf-enabled/pub.conf && mkdir -p /srv/www/htdocs/pub/
+# ADD index.html /srv/www/htdocs/pub/index.html
 
-CMD ["/usr/sbin/apachectl", "-DFOREGROUND"]
+# CMD ["/usr/sbin/apachectl", "-DFOREGROUND"]
 
 

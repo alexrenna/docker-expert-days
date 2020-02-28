@@ -2,7 +2,7 @@
 #
 # VERSION               1.0.0
 
-FROM centos/httpd-24-centos7
+FROM centos:7
 MAINTAINER Alessandro Renna <alessandro.renna@suse.com>
 
 ARG repo

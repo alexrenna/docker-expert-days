@@ -2,7 +2,7 @@
 #
 # VERSION               1.0.0
 
-FROM centos:7
+FROM centos:centos7.0.1406
 MAINTAINER Alessandro Renna <alessandro.renna@suse.com>
 
 ARG repo

@@ -2,8 +2,8 @@
 #
 # VERSION               1.0.0
 
-FROM opensuse
-MAINTAINER Michele Bologna <michele.bologna@suse.com>
+FROM opensuse/leap:15.1
+MAINTAINER Alessandro Renna <alessandro.renna@suse.com>
 
 ARG repo
 ARG cert

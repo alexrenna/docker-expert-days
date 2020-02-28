@@ -1,4 +1,4 @@
 #!/bin/bash
 set -e
 
-yum install -y python python-xml httpd
+yum install -y python python-lxml httpd
